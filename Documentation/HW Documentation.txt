@@ -1,0 +1,25 @@
+------------------------- HW Reference ------------------------
+
+* Arduino connections
+ - Buzzer: D3
+ - Buttons (no external pullup)
+	Left: D2
+	Up: D4
+ 	Right: D5
+	Down: D6
+	B: D7
+	A: D8
+- Display (uses I2C)
+	SCK (SCL): A5
+	SDA : A4
+
+* Components
+ - Arduino Nano (https://www.aliexpress.com/item/32859196868.html?spm=a2g0s.9042311.0.0.27424c4diWx7dW)
+ - Display SH1106 OLED 0.96 inch I2C white (https://www.aliexpress.com/item/4000060814795.html?spm=a2g0o.productlist.0.0.be68a4d0JJm0QW&algo_pvid=27bfd23a-e358-407f-9475-f9019f7bc964&algo_expid=27bfd23a-e358-407f-9475-f9019f7bc964-0&btsid=0bb0623016014486470871802e8d36&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_)	
+ - Battery charger module (https://www.aliexpress.com/item/32797834680.html?spm=a2g0s.9042311.0.0.27424c4diWx7dW)
+ - LiPo Battery 200mAh (https://www.aliexpress.com/item/32951173000.html?spm=a2g0s.9042311.0.0.27424c4diWx7dW)
+ - Passive Buzzer (https://www.aliexpress.com/item/4000148640191.html?spm=a2g0s.9042311.0.0.27424c4diWx7dW)
+ - Slide switch (https://www.aliexpress.com/item/32964400942.html?spm=a2g0s.9042311.0.0.27424c4diWx7dW)
+ - Buttom 6x6x6mm (https://www.aliexpress.com/item/1058764733.html?spm=a2g0s.9042311.0.0.27424c4diWx7dW)
+ - Prototype PCB 5x7 cm (https://www.aliexpress.com/item/1919230063.html?spm=a2g0s.9042311.0.0.27424c4diWx7dW)
+
