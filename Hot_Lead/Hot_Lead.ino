@@ -22,7 +22,6 @@ uint8_t x_pos,y_pos;
 
 void setup(void)
 {
-  Serial.begin(9600); //172 milli to update screen (5fps)
   u8x8.begin();
   u8x8.setPowerSave(0);
   button.begin(LEFT_PIN,UP_PIN,RIGHT_PIN,DOWN_PIN,B_PIN,A_PIN);
@@ -72,18 +71,5 @@ void loop(void)
     }
     BTStateOld=BTState;
   }
-  //u8x8.drawTile(x_pos,y_pos, 1, tile);
-  
-  static int counter_x,counter_y;
-  static unsigned long init_time;
-  static unsigned long final_time;
-  u8x8.drawTile(counter_x,counter_y, 1, tile);
-  if(counter_x==0 && counter_y==0) {init_time=millis();}
-  if(counter_x<16) {counter_x++;}
-  else
-  {
-    counter_x=0; 
-    if(counter_y<8){counter_y++;}
-    else{final_time=millis()-init_time;  Serial.println(final_time); delay(1000);counter_y=0; u8x8.clearDisplay(); delay(1000);}
-  }
+  u8x8.drawTile(x_pos,y_pos, 1, tile);
 }
