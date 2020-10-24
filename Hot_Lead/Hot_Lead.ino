@@ -2,13 +2,11 @@
 
 //-------------------- Includes -------------------------------//
 //Library includes
-#include <Arduino.h>
 #include <U8x8lib.h>
 //Game includes
 #include "classes_header.h"
 #include "definitions_header.h"
 #include "tiles_header.h"
-#include "functions_header.h"
 
 //-------------------- Global Variables --------------------//
 // Creating screen object type
@@ -71,5 +69,6 @@ void loop(void)
     }
     BTStateOld=BTState;
   }
-  u8x8.drawTile(x_pos,y_pos, 1, tile);
+  drawTile1x1(x_pos,y_pos,tile);
+  //drawTile2x2(x_pos,y_pos,tile);
 }

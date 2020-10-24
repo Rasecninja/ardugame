@@ -1,6 +1,6 @@
 //-------------------------------------------- Classes Definitions ----------------------------------------------//
-#ifndef CLASSESHEADERFILE_H
-#define CLASSESHEADERFILE_H
+#ifndef CLASSES_HEADERFILE_H
+#define CLASSES_HEADERFILE_H
 //---------------- Includes --------------------------//
 #include "definitions_header.h"
 
