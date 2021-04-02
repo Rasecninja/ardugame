@@ -26,6 +26,7 @@ class Buttons
 		uint8_t B_State=1;
 		uint8_t A_State=1;
 	public:
+    // Initialize Arduino GPIO
 		void begin(uint8_t Left_Pin,uint8_t Up_Pin,uint8_t Right_Pin,uint8_t Down_Pin,uint8_t B_Pin,uint8_t A_Pin)
 		{
 			this->Left_Pin=Left_Pin;
@@ -41,7 +42,23 @@ class Buttons
 			pinMode(B_Pin,INPUT_PULLUP);
 			pinMode(A_Pin,INPUT_PULLUP);
 		}
-		uint8_t check()
+    // Get user current press key matrix
+    uint8_t get_raw_press()
+    {
+      int BTRead=((!digitalRead(A_Pin))<<5)+((!digitalRead(B_Pin))<<4)+((!digitalRead(Down_Pin))<<3)+((!digitalRead(Right_Pin))<<2)+((!digitalRead(Up_Pin))<<1)+(!digitalRead(Left_Pin));
+      if (BTRead != BTMatrixOld) 
+      {
+        LastDebounceTime = millis();
+      }
+         
+      if ((millis() - LastDebounceTime) > DebounceDelay) 
+      {
+        BTMatrixOld=BTRead;
+        return BTRead;
+      }
+    }
+    // Checks for new status only and returns just one key value
+		uint8_t get_filter_press()
 		{
 			int BTRead=((!digitalRead(A_Pin))<<5)+((!digitalRead(B_Pin))<<4)+((!digitalRead(Down_Pin))<<3)+((!digitalRead(Right_Pin))<<2)+((!digitalRead(Up_Pin))<<1)+(!digitalRead(Left_Pin));
       if (BTRead != BTMatrixOld) 
