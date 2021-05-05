@@ -30,7 +30,7 @@ void loop(void)
 {
   
   static int BTStateOld;
-  int BTState = button.get_filter_press();
+  int BTState = button.check();
   prev_x=x_pos;
   prev_y=y_pos;
   if(BTState!=BTStateOld)

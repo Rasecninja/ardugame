@@ -22,7 +22,7 @@ class Buttons
 		uint8_t A_Pin;
 	public:
     // Initialize Arduino GPIO
-		void begin(uint8_t Left_Pin,uint8_t Up_Pin,uint8_t Right_Pin,uint8_t Down_Pin,uint8_t B_Pin,uint8_t A_Pin,bool MultiKey)
+		void begin(uint8_t Left_Pin,uint8_t Up_Pin,uint8_t Right_Pin,uint8_t Down_Pin,uint8_t B_Pin,uint8_t A_Pin,bool MultiKey=0)
 		{
 			this->Left_Pin=Left_Pin;
 			this->Up_Pin=Up_Pin;
@@ -44,30 +44,14 @@ class Buttons
       int BTRead=((!digitalRead(A_Pin))<<5)+((!digitalRead(B_Pin))<<4)+((!digitalRead(Down_Pin))<<3)+((!digitalRead(Right_Pin))<<2)+((!digitalRead(Up_Pin))<<1)+(!digitalRead(Left_Pin));
       if (BTRead != BTMatrixOld) 
       {
-        LastDebounceTime = millis();
-      }
-         
-      if ((millis() - LastDebounceTime) > DebounceDelay) 
-      {
-        BTMatrixOld=BTRead;
-        return BTRead;
-      }
-    }
-    // Checks for new status only and returns just one key value
-		uint8_t get_filter_press()
-		{
-			int BTRead=((!digitalRead(A_Pin))<<5)+((!digitalRead(B_Pin))<<4)+((!digitalRead(Down_Pin))<<3)+((!digitalRead(Right_Pin))<<2)+((!digitalRead(Up_Pin))<<1)+(!digitalRead(Left_Pin));
-      if (BTRead != BTMatrixOld) 
-      {
           LastDebounceTime = millis();
       }
-         
-        if ((millis() - LastDebounceTime) > DebounceDelay) 
-        {
+      if ((millis() - LastDebounceTime) > DebounceDelay) 
+      {
         if (BTRead != BTMatrixNew) 
         {
           BTMatrixNew = BTRead;
-
+          if(MultiKey) return BTRead;
           switch(BTMatrixNew)
           {
             case LEFT: 
@@ -97,7 +81,6 @@ class Buttons
       BTMatrixOld=BTRead;
       return BTPressed;
     }
-
 };
 
 #endif
