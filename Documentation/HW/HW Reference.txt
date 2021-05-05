@@ -1,6 +1,12 @@
 ------------------------- HW Reference ------------------------
 
-* Arduino connections
+* HW goals
+ - Make a Arduboy clone with the cheapest components possible, total cost around USD 9.00
+ - Easy and fast assembly with no external passive components, only modules (less soldering time plz)
+ - Provide same HW features as Arduboy, except for LED (which is useless anyway)
+ - Make the device with no reference schematics (why use schematics if you got a brain?)
+
+* Arduino connections (at least this reference you need to code)
  - Buzzer: D3
  - Buttons (no external pullup)
 	Left: D2
@@ -9,11 +15,11 @@
 	Down: D6
 	B: D7
 	A: D8
-- Display (uses I2C)
+ - Display (uses I2C, I know it is slow...)
 	SCK (SCL): A5
 	SDA : A4
 
-* Components
+* Components (for you cheap engineer)
  - Arduino Nano (https://www.aliexpress.com/item/32859196868.html?spm=a2g0s.9042311.0.0.27424c4diWx7dW)
  - Display SH1106 OLED 0.96 inch I2C white (https://www.aliexpress.com/item/4000060814795.html?spm=a2g0o.productlist.0.0.be68a4d0JJm0QW&algo_pvid=27bfd23a-e358-407f-9475-f9019f7bc964&algo_expid=27bfd23a-e358-407f-9475-f9019f7bc964-0&btsid=0bb0623016014486470871802e8d36&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_)	
  - Battery charger module (https://www.aliexpress.com/item/32797834680.html?spm=a2g0s.9042311.0.0.27424c4diWx7dW)
