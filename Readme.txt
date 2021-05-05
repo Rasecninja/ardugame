@@ -1,7 +1,7 @@
 =======================  == == ArduGame == == =========================
 
 * What is this repo?
-This is my little pet project that I called ArduGame (nothing to do with the Gabrini Araujo project)
+This is my little pet project that I called ArduGame, a bootleg version of Arduboy
 
 * What is this ArduGame project?
 This project is a ground up creation of a small 8 bit handheld game console using Arduino 
