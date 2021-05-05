@@ -1,0 +1,12 @@
+------------------------- SW Reference ------------------------
+
+* SW goals
+ - Use all HW resources to the limit
+ - Elegant object oriented code approach
+ - Nice and fun game that can actually be played (not just a useless demo)
+ - Learn a lot from all this (specially how to make smart and fast code for crap HW)
+
+* Documentation (at least some reference we need)
+ - Docs are separeted by the category so that this folder doesn't become a mess
+
+

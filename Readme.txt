@@ -1,13 +1,20 @@
 =======================  == == ArduGame == == =========================
 
-* Main Ideas: 
-	- Make game using the u8g2 display lib in 8x8 mode
-	- Use similar idea as Commodore PET to change the font 
-	  "character set" as sprites
-	- Add music to game
-	
-!!!!! Talvez um duelo do velho oeste que o cara espera o sino da igreja
-pra atira no outro. O sino toca em tempo diferente td vez. Pode move 
-pra cima e pra baixo e se caba as bala pode chega perto do cara e da
-uma facada nele. Cada cara vai se mais dificil com vida maior e mais bala
-e mais rapido pra esquiva dos tiro.
+* What is this repo?
+This is my little pet project that I called ArduGame, a bootleg version of Arduboy
+
+* What is this ArduGame project?
+This project is a ground up creation of a small 8 bit handheld game console using Arduino 
+
+* What is the scope of this project?
+In this project I: 
+   - planed and assembled the hardware
+   - coded the game engine and little nasty things necessary to make my life easy
+   - made some cool pixel art
+   - made a game out of all this
+   - prepared documentation 
+
+* Why do I care about your little pet project?
+This project can help anyone seeking light in how to make an entire game by oneself, from HW to SW to happiness!
+
+Make sure to always have fun making stuff!!!!
