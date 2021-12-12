@@ -1,8 +1,8 @@
-//-------------------------------------------- Classes Definitions ----------------------------------------------//
-#ifndef CLASSES_HEADERFILE_H
-#define CLASSES_HEADERFILE_H
+//------------------------------------ Drivers for HMI --------------------------------//
+#ifndef DRIVERS_H
+#define DRIVERS_H
 //---------------- Includes --------------------------//
-#include "definitions_header.h"
+#include "constants.h"
 
 //---------------- Button Class --------------------------//
 class Buttons 

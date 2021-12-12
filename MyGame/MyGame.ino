@@ -4,9 +4,9 @@
 //Library includes
 #include <U8x8lib.h>
 //Game includes
-#include "classes_header.h"
-#include "definitions_header.h"
-#include "tiles_header.h"
+#include "drivers.h"
+#include "constants.h"
+#include "bitmaps.h"
 
 //-------------------- Global Variables --------------------//
 // Creating screen object type

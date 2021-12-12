@@ -1,6 +1,6 @@
-//---------------------------------------------- General Definitions --------------------------------------------//
-#ifndef DEFINITIONS_HEADER_FILE_H
-#define DEFINITIONS_HEADER_FILE_H
+//--------------------------------- General Definitions and Constants ------------------------//
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
 //-------------------- Defines -------------------------------//
 // Define buttons
 #define LEFT_PIN 2
