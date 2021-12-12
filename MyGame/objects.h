@@ -1,8 +1,6 @@
 //------------------------------------ Objects in the game --------------------------------//
 #ifndef OBJECTS_H
 #define OBJECTS_H
-//---------------- Includes --------------------------//
-#include "globals.h"
 
 //---------------- Player Class --------------------------//
 class Line {

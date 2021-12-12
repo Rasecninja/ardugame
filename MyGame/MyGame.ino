@@ -1,17 +1,10 @@
 //-------------------------------------------- HOT LEAD ----------------------------------------------//
 
-//-------------------- Includes -------------------------------//
-//Library includes
-#include <U8x8lib.h>
-//Game includes
-#include "drivers.h"
 #include "globals.h"
-#include "bitmaps.h"
-#include "objects.h"
 
 //-------------------- Global Variables --------------------//
 // Creating screen object type
-U8X8_SH1106_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+Screens screen;
 // Creating the buttons object type
 Buttons button;
 // Tile
@@ -22,9 +15,9 @@ static uint8_t prev_x,prev_y;
 
 void setup(void)
 {
-  u8x8.begin();
-  u8x8.setPowerSave(0);
+
   button.begin(LEFT_PIN,UP_PIN,RIGHT_PIN,DOWN_PIN,B_PIN,A_PIN);
+  screen.begin();
 }
 
 void loop(void)
@@ -71,5 +64,5 @@ void loop(void)
   //if(prev_x!=x_pos || prev_y!=y_pos) {cleanTile1x1(prev_x,prev_y); drawTile1x1(x_pos,y_pos,tile);}
   //if(prev_x!=x_pos || prev_y!=y_pos) {cleanTile2x2(prev_x,prev_y); drawTile2x2(x_pos,y_pos,tile);}
   //if(prev_x!=x_pos || prev_y!=y_pos) {cleanTile2x2(prev_x,prev_y); drawTile1x2(x_pos,y_pos,tile);}
-  if(prev_x!=x_pos || prev_y!=y_pos) {cleanTile2x2(prev_x,prev_y); drawTile2x2(x_pos,y_pos,tile);}
+  if(prev_x!=x_pos || prev_y!=y_pos) {screen.cleanTile2x2(prev_x,prev_y); screen.drawTile2x2(x_pos,y_pos,tile);}
 }
