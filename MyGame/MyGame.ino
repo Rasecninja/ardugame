@@ -5,8 +5,9 @@
 #include <U8x8lib.h>
 //Game includes
 #include "drivers.h"
-#include "constants.h"
+#include "globals.h"
 #include "bitmaps.h"
+#include "objects.h"
 
 //-------------------- Global Variables --------------------//
 // Creating screen object type
@@ -30,7 +31,7 @@ void loop(void)
 {
   
   static int BTStateOld;
-  int BTState = button.get_filter_press();
+  int BTState = button.get_key();
   prev_x=x_pos;
   prev_y=y_pos;
   if(BTState!=BTStateOld)

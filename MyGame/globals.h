@@ -1,6 +1,6 @@
 //--------------------------------- General Definitions and Constants ------------------------//
-#ifndef CONSTANTS_H
-#define CONSTANTS_H
+#ifndef GLOBALS_H
+#define GLOBALS_H
 //-------------------- Defines -------------------------------//
 // Define buttons
 #define LEFT_PIN 2
@@ -9,6 +9,7 @@
 #define DOWN_PIN 6
 #define B_PIN 7
 #define A_PIN 8
+#define SUPPORT_MULTI_KEY_PRESS 0
 // Define buzzer
 #define BUZZER_PIN 3
 
