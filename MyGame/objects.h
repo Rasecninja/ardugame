@@ -2,26 +2,32 @@
 #ifndef OBJECTS_H
 #define OBJECTS_H
 
+#include "drivers.h"
+
 //---------------- Player Class --------------------------//
-class Line {
-   public:
-      void setLength( double len );
-      double getLength( void );
-      Line(double len);  // This is the constructor
- 
-   private:
-      double length;
+class Player 
+{
+ public:
+    Player(char *pBitmap,char BitmapSize,char BitmapDimX,char BitmapDimY);  // This is the constructor
+    void update_pos(ButtonPressed Btn);
+ private:
+    char *pBitmap;
+    char BitmapSize; // in bytes
+    char BitmapDimX;
+    char BitmapDimY;
+    char PosX;
+    char PosY;
 };
  
 // Member functions definitions including constructor
-Line::Line( double len) {
-   length = len;
+Player::Player(char *pBitmap,char BitmapSize,char BitmapDimX,char BitmapDimY) 
+{
+   
 }
-void Line::setLength( double len ) {
-   length = len;
-}
-double Line::getLength( void ) {
-   return length;
+
+void Player::update_pos(ButtonPressed Btn)
+{
+
 }
 
 #endif
