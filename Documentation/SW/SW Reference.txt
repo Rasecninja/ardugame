@@ -9,4 +9,13 @@
 * Documentation (at least some reference we need)
  - Docs are separeted by the category so that this folder doesn't become a mess
 
+IMPORTANT:
+ - Since the Arduino board is selected is "non-conventional" some steps are needed
+ - The driver for the serial USB interface CH340 might be needed
+ - It can be found in this repo: https://github.com/juliagoda/CH341SER
+ - On Linux dialout permission might be needed:
+                stat /dev/ttyUSB0
+                sudo usermod -a -G dialout USER_NAME
+                ls -l /dev/ttyUSB0
+ - Follow the link for more info: https://askubuntu.com/questions/133235/how-do-i-allow-non-root-access-to-ttyusb0
 
