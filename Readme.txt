@@ -18,3 +18,9 @@ In this project I:
 This project can help anyone seeking light in how to make an entire game by oneself, from HW to SW to happiness!
 
 Make sure to always have fun making stuff!!!!
+
+* Improvements
+- Clean and finish documentation
+- Add a 3D printed case design
+- Make a smooth pixel wise movement (not only 8 pixels)
+- Search for good sources of pixel art development
